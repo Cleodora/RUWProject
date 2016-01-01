@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ssfroman.ContactPickerActivity" >
+    <item android:id="@+id/action_add"
+        android:title="Add"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/content_new"/>
+
+    <item android:id="@+id/action_pick"
+          android:title="Choose contact"
+          android:orderInCategory="100"
+          app:showAsAction="always"
+          android:icon="@drawable/add_person"/>
+</menu>

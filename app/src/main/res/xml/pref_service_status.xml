@@ -1,0 +1,86 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="service_switch"
+        android:title="SERVICE">
+        <CheckBoxPreference
+            android:icon="@drawable/ic_spam_filter"
+            android:defaultValue="true"
+            android:key="spam_filter_status"
+            android:summary="Stop SMS having spam contents"
+            android:title="Spam filter"/>
+
+        <Preference
+            android:icon="@drawable/ic_specify_spam_sms"
+            android:key="specify_spam_sms"
+            android:title="Specify spam SMS">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.example.ssfroman.ThreadsActivity"
+                android:targetPackage="com.example.ssfroman"/>
+        </Preference>
+
+        <CheckBoxPreference
+            android:icon="@drawable/ic_block_numbers2"
+            android:defaultValue="true"
+            android:key="block_number_status"
+            android:summary="Stop SMS from blocked contacts"
+            android:title="Block numbers"/>
+
+        <Preference
+            android:icon="@drawable/ic_specify_phone_number"
+            android:key="specify_phone_number"
+            android:title="Specify phone number">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.example.ssfroman.ContactPickerActivity"
+                android:targetPackage="com.example.ssfroman"/>
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="filtered_sms"
+        android:title="FILTER">
+        <Preference
+            android:icon="@drawable/ic_spam_sms"
+            android:summary="Spam SMS found here"
+            android:title="Spam SMS">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.example.ssfroman.SpamThreadsActivity"
+                android:targetPackage="com.example.ssfroman"/>
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_blocked_sms2"
+            android:summary="Blocked SMS found here"
+            android:title="Blocked SMS">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.example.ssfroman.BlockedThreadActivity"
+                android:targetPackage="com.example.ssfroman"/>
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="extra"
+        android:title="EXTRA">
+        <Preference
+            android:icon="@drawable/ic_setting_help"
+            android:title="Help">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.example.ssfroman.FirstTimeGuideActivity"
+                android:targetPackage="com.example.ssfroman"/>
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_setting_about"
+            android:title="About">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetClass="com.example.ssfroman.AboutActivity"
+                android:targetPackage="com.example.ssfroman"/>
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

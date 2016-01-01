@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ssfroman"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.ssfroman.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <receiver android:name="com.example.ssfroman.MySMSReceiver" >
+            <intent-filter android:priority="999" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.example.ssfroman.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@android:style/Theme.Holo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.ssfroman.ThreadsActivity"
+            android:label="@string/title_activity_threads" >
+        </activity>
+        <activity
+            android:name="com.example.ssfroman.SMSActivity"
+            android:label="@string/title_activity_sms" >
+        </activity>
+        <activity
+            android:name="com.example.ssfroman.SpamThreadsActivity"
+            android:label="@string/title_activity_spam_threads" >
+        </activity>
+        <activity
+            android:name="com.example.ssfroman.SpamSMSActivity"
+            android:label="@string/title_activity_spam_sms" >
+        </activity>
+        <activity
+            android:name="com.example.ssfroman.BlockedThreadActivity"
+            android:label="@string/title_activity_blocked_threads" >
+        </activity>
+        <activity
+            android:name="com.example.ssfroman.BlockedSMSActivity"
+            android:label="@string/title_activity_blocked_sms" >
+        </activity>
+        <activity
+            android:name="com.example.ssfroman.ContactPickerActivity"
+            android:label="@string/title_activity_contact_picker" >
+        </activity>
+        <activity
+            android:name="com.example.ssfroman.FirstTimeGuideActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_first_time_guide"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+        <activity
+            android:name="com.example.ssfroman.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+    </application>
+
+</manifest>

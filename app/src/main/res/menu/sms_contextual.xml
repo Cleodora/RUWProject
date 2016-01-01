@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.ssfroman.SMSActivity" >
+    <item android:id="@+id/action_move_to_sapm"
+          android:title="Move to spam"
+          android:orderInCategory="100"
+          app:showAsAction="always"
+          android:icon="@drawable/ic_move_to_spam"/>
+</menu>
